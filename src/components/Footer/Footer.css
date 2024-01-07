@@ -1,4 +1,4 @@
-.f-container{
+/* .f-container{
     justify-content: space-between;
 }
 .f-left{
@@ -39,4 +39,34 @@
     .f-right{
         justify-content: center;
     }
+} */
+
+.f-container {
+    @apply justify-between;
+}
+
+.f-left {
+    @apply gap-4;
+}
+
+.f-menu {
+    @apply gap-6 font-medium mt-6;
+}
+
+@media (max-width: 768px) {
+    .f-container {
+        @apply justify-center justify-center;
+    }
+
+    .f-container>div {
+        @apply items-center text-center items-center text-center;
+    }
+
+    .f-right {
+        @apply justify-center justify-center;
+    }
+}
+
+.span1:hover {
+    @apply cursor-pointer transition-all duration-200 ease-[ease-in] scale-[1.2];
 }

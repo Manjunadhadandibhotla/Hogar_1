@@ -1,4 +1,4 @@
-.c-container{
+/* .c-container{
     justify-content: space-between;
 }
 .c-container>div{
@@ -18,14 +18,7 @@
 .contactModes .row{
     gap:1.5rem;
 }
-.mode{
-    width: 16rem;
-    padding: 1rem;
-    border: 0.3px solid rgba(51, 84, 217, 0.721) ;
-    border-radius: 5px;
-    gap:1rem;
-    transition: all 300ms ease-in;
-}
+
 
 .mode .button{
     width: 90%;
@@ -73,5 +66,84 @@
     }
     .mode{
         width: 100%;
+    }
+} */
+
+.c-container {
+    @apply justify-between;
+}
+
+.c-container>div {
+    @apply flex-1;
+}
+
+.c-right {
+    @apply w-full;
+}
+
+.c-left {
+    @apply gap-2;
+}
+
+.contactModes {
+    @apply gap-4 mt-8;
+}
+
+.contactModes .row {
+    @apply gap-6;
+}
+
+.mode {
+    width: 16rem;
+    padding: 1rem;
+    border: 0.3px solid rgba(51, 84, 217, 0.721);
+    border-radius: 5px;
+    gap: 1rem;
+    transition: all 300ms ease-in;
+}
+
+.mode .button {
+    @apply w-[90%] text-[color:var(--blue)] text-[0.9rem] font-semibold border-[0.5px] border-solid border-[#3767b2] hover:text-[white];
+    background: var(--lightBlue);
+}
+
+.mode> :nth-child(1) {
+    @apply w-full gap-[1.6rem];
+}
+
+.mode .detail .primaryText {
+    @apply text-[1.1rem] font-semibold;
+}
+
+.mode:hover {
+    scale: 1.1;
+}
+
+.mode .button:hover {
+    background: #48a9da;
+    scale: 0.8;
+}
+
+@media (max-width: 1024px) {
+    .c-container {
+        @apply flex-col;
+    }
+
+    .c-right {
+        @apply justify-center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contactModes {
+        @apply w-full;
+    }
+
+    .row {
+        @apply flex-col w-full;
+    }
+
+    .mode {
+        @apply w-full;
     }
 }

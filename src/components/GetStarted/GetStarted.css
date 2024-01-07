@@ -1,4 +1,4 @@
-.inner-container{
+/* .inner-container{
     gap: 1.5rem;
     background: #4161df;
     padding: 2rem;
@@ -19,4 +19,27 @@
     border: 2px solid white;
     box-shadow: var(--shadow);
     border-radius: 10px;
+} */
+
+
+.inner-container {
+    @apply gap-6 text-center p-8 rounded-[10px] border-[6px] border-solid border-[rgb(38,44,44)];
+    background: rgb(38, 44, 44);
+}
+
+.inner-container .primaryText {
+    @apply text-[white] font-semibold;
+}
+
+.inner-container .secondaryText {
+    color: rgba(255, 255, 255, 0.587);
+}
+
+.inner-container .button {
+    @apply shadow-[var(--shadow)] rounded-[10px] border-2 border-solid border-[white];
+    background: #5a73d7;
+}
+.button:hover {
+    background: var(--blue-gradient);
+    scale: 1.1;
 }

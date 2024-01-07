@@ -1,4 +1,4 @@
-.hero-wrapper {
+/* .hero-wrapper {
   color: white;
   position: relative;
   padding-bottom: 2rem;
@@ -45,6 +45,7 @@
     padding: 0.5rem 1rem;
     justify-content: space-between;
     width: 100%;
+    color: black;
     
 }
 
@@ -101,5 +102,100 @@
   .stat>:nth-child(2)
   {
     font-size: 0.8rem;
+  }
+} */
+.hero-wrapper {
+  @apply text-[white] relative pb-8;
+  
+}
+
+.hero-container {
+  @apply justify-between items-end;
+}
+
+.image-container {
+  width: 30rem;
+  height: 35rem;
+  overflow: hidden;
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(255, 255, 255, 0.12);
+}
+.image-container>img {
+  @apply w-full h-full;
+}
+
+.hero-title {
+  @apply relative z-[1];
+}
+.bit1{
+  margin-left: 10px;
+  
+}
+.bit2{
+  margin-right: 10px;
+}
+.hero-title>h1 {
+  @apply font-semibold text-[3.8rem] leading-[4rem];
+}
+
+.orange-circle {
+  @apply w-12 h-12 absolute z-[-1] top-[-5%] rounded-[1000px] right-[28%];
+  background: var(--orange-gradient);
+}
+
+.search-bar {
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid rgba(120, 120, 120, 0.374);
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  width: 100%;
+  color: black;
+
+}
+.search-bar>input {
+  @apply text-xl border-[none];
+  outline: none;
+}
+
+.stats {
+  @apply w-full justify-between;
+}
+
+.stat> :nth-child(1) {
+  @apply text-[2rem];
+}
+
+.stat> :nth-child(1)> :last-child {
+  @apply text-[orange];
+}
+
+.image-container>img {
+  @apply w-full h-full;
+}
+
+@media (max-width: 640px) {
+  .hero-container {
+    @apply mt-8;
+  }
+
+  .hero-title>h1 {
+    @apply text-[2.5rem] leading-[3rem];
+  }
+
+  .image-container {
+    @apply w-[95%] h-[25rem];
+  }
+
+  .stats {
+    @apply justify-center gap-6 font-[wrap];
+  }
+
+  .stat> :nth-child(1) {
+    @apply text-2xl;
+  }
+
+  .stat> :nth-child(2) {
+    @apply text-[0.8rem];
   }
 }

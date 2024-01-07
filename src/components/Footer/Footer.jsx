@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="f-wrapper">
       <div className="paddings innerWidth flexCenter f-container">
         {/* left side */}
-        <div className="flexColStart f-left">
+        <div className="flexColStart f-left  ">
           <img src="./logo1.png" alt="" width={220} />
           <span className="secondaryText">
             Our vision is to make all people <br />
@@ -15,19 +15,25 @@ const Footer = () => {
 
         <div className="flexColStart f-right">
           <span className="primaryText">Information</span>
-          <span className="secondaryText">
+          <span className="secondaryText ">
             Cherukupalli, Guntur, Andhra Pradesh
           </span>
-          <div className="flexCenter f-menu">
-            <span className="span1">Property</span>
-            <span className="span1">Services</span>
-            <span className="span1">Product</span>
-            <span className="span1">About Us</span>
+          <div className="flexCenter f-menu ">
+            <span className="span1 no-underline hover:underline hover:text-sky-600 ">
+              Property
+            </span>
+            <span className="span1 no-underline hover:underline hover:text-sky-600">
+              Services
+            </span>
+            <span className="span1 no-underline hover:underline hover:text-sky-600">
+              Product
+            </span>
+            <span className="span1 no-underline hover:underline hover:text-sky-600">
+              About Us
+            </span>
           </div>
-          
         </div>
       </div>
-      
     </div>
   );
 };

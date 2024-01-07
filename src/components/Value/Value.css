@@ -1,4 +1,4 @@
-.v-container .image-container{
+/* .v-container .image-container{
     border: 8px solid rgb(232 232 232 /93%);
 
 }
@@ -53,5 +53,65 @@
 @media (max-width: 768px) {
     .accordionButton .primaryText{
         font-size: .8rem;
+    }
+} */
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+.v-container .image-container {
+    @apply border-8 border-solid border-[rgb(232_232_232_/93%)];
+}
+
+.v-container>div {
+    @apply flex-1;
+}
+
+.v-right {
+    @apply gap-2;
+}
+
+.accordion {
+    @apply mt-8 border-[none];
+}
+
+.accordionItem {
+    @apply overflow-hidden mb-5 rounded-lg border-[0.8px] border-solid border-[whitesmoke];
+    background: white;
+}
+
+.icon {
+    @apply p-2.5 rounded-[5px];
+    background: #eeeeff;
+}
+
+.icon svg {
+    @apply fill-[var(--blue)];
+}
+
+.accordionButton .primaryText {
+    @apply text-[1.1rem];
+}
+
+.accordionButton {
+    @apply w-full justify-between cursor-pointer p-4;
+    background: white;
+}
+
+.accordionItem.expanded {
+    @apply shadow-[var(--shadow)] rounded-[5px];
+}
+
+@media (max-width: 1024px) {
+    .v-container {
+        @apply flex-col;
+    }
+}
+
+@media (max-width: 768px) {
+    .accordionButton .primaryText {
+        @apply text-[0.8rem];
     }
 }

@@ -13,10 +13,10 @@ import data from "../../utils/accordion";
 
 const Value = () => {
   return (
-    <section className="v-wrapper">
+    <section className="v-wrapper" id="val">
       <div className="paddings innerWidth flexCenter v-container">
-        <div className="v-left">
-          <div className="image-container">
+        <div className="v-left ">
+          <div className="image-container sm:mx-0 sm:shrink-0 shadow-lg shadow-indigo-500/80">
             <img src="./value.png" alt="" />
           </div>
         </div>
@@ -30,25 +30,21 @@ const Value = () => {
             We believe a good balance to live can make your life better
           </span>
           <Accordion
-            className="accordion"
+            className="accordion "
             allowMultipleExpanded={false}
             preExpanded={[0]}
           >
             {data.map((item, i) => {
-
-              const {className,setClassName} =useState(null)
+              const { className, setClassName } = useState(null);
               return (
-                <AccordionItem className="accordionItem"key={i} uuid={i}>
+                <AccordionItem
+                  className="accordionItem outline outline-offset-1 outline-blue-200 "
+                  key={i}
+                  uuid={i}
+                >
                   <AccordionItemHeading>
-                    <AccordionItemButton className="flexCenter accordionButton">
-                      {/* <AccordionItemState>
-                        {({ expanded }) =>
-                          expanded
-                            ? setClassName("expanded")
-                            : setClassName("collapsed")
-                        }
-                      </AccordionItemState> */}
-                      <div className="flexCenter icon">{item.icon}</div>
+                    <AccordionItemButton className="flexCenter accordionButton ">
+                      <div className="flexCenter icon ">{item.icon}</div>
                       <span className="primaryText">{item.heading}</span>
                       <div className="flexCenter icon">
                         <MdOutlineArrowDropDown size={20} />

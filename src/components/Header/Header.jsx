@@ -22,19 +22,31 @@ const Header = () => {
           }}
         ></OutsideClickHandler>
         <div className=" flexCenter h-menu" style={getMenuStyles(menuOpened)}>
-          <a href="" className="h-menu-1">
+          <a
+            href="#res"
+            className="h-menu-1 no-underline hover:underline hover:text-sky-600 "
+          >
             Residencies
           </a>
-          <a href="" className="h-menu-2">
+          <a
+            href="#val"
+            className="h-menu-2 no-underline hover:underline hover:text-sky-600 "
+          >
             Our Values
           </a>
-          <a href="" className="h-menu-3">
+          <a
+            href="#cont"
+            className="h-menu-3 no-underline hover:underline hover:text-sky-600"
+          >
             Contact Us
           </a>
-          <a href="" className="h-menu-4">
+          <a
+            href="#gets"
+            className="h-menu-4 no-underline hover:underline hover:text-sky-600"
+          >
             Get Started
           </a>
-          <button className="button">
+          <button className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500   hover:scale-110 hover:-translate-y-1.5 text-white font-bold py-2 px-4 rounded ">
             <a href="mailto:manjunadhadandibhotla@gmail.com">Contact</a>
           </button>
           <div

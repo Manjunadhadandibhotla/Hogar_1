@@ -1,8 +1,7 @@
-.c-container{
-    justify-content: space-between;
-    gap: 1rem;
+.c-container {
+    @apply justify-between gap-4;
 }
-.c-container>img{
-    width: 9rem;
 
+.c-container>img {
+    @apply w-36;
 }
